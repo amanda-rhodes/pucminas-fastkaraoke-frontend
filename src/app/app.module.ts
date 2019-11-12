@@ -13,6 +13,7 @@ import { NovoPedidoPage } from '../pages/novo-pedido/novo-pedido';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApplicationProvider } from '../providers/application/application';
+import { HttpClientModule, HttpClient} from "@angular/common/http";
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ApplicationProvider } from '../providers/application/application';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -43,7 +45,8 @@ import { ApplicationProvider } from '../providers/application/application';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ApplicationProvider
+    ApplicationProvider,
+    HttpClient
   ]
 })
 export class AppModule {}
