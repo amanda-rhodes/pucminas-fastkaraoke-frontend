@@ -12,6 +12,7 @@ import { NovoPedidoPage } from '../pages/novo-pedido/novo-pedido';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { ApplicationProvider } from '../providers/application/application';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApplicationProvider
   ]
 })
 export class AppModule {}
