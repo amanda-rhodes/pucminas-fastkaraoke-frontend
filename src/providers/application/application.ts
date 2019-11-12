@@ -26,4 +26,8 @@ export class ApplicationProvider {
     return this.http.get<any>(`${this.serverUrl}/pedido`);
   }
 
+  postNovoPedido(data) {
+    return this.http.post(`${this.serverUrl}/pedido`, JSON.stringify(`${this.serverUrl}/pedido`));
+  }
+
 }

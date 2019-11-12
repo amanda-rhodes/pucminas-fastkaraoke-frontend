@@ -6,28 +6,28 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page7">
-  <form id="novoPedido-form2">
+  <form id="novoPedido-form2" (ngSubmit)="fazerPedido()">
     <ion-list id="novoPedido-list6">
       <ion-item id="novoPedido-input1">
         <ion-label>
           Nome
         </ion-label>
-        <ion-input type="text" placeholder="seu nome"></ion-input>
+        <ion-input type="text" placeholder="seu nome" [(ngModel)]="novoPedido.nome" name="nome"></ion-input>
       </ion-item>
       <ion-item id="novoPedido-input2">
         <ion-label>
           Mesa
         </ion-label>
-        <ion-input type="number" placeholder="número da mesa"></ion-input>
+        <ion-input type="number" placeholder="número da mesa" [(ngModel)]="novoPedido.mesa" name="mesa"></ion-input>
       </ion-item>
       <ion-item id="novoPedido-input3">
         <ion-label>
           Música
         </ion-label>
-        <ion-input type="number" placeholder="número da música"></ion-input>
+        <ion-input type="number" placeholder="número da música" [(ngModel)]="novoPedido.musica" name="musica"></ion-input>
       </ion-item>
     </ion-list>
-    <button id="novoPedido-button2" ion-button color="stable" block>
+    <button id="novoPedido-button2" type="submit" ion-button color="stable" block>
       Enviar
     </button>
   </form>
