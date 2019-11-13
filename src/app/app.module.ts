@@ -16,6 +16,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ApplicationProvider } from '../providers/application/application';
 import { HttpClientModule, HttpClient} from "@angular/common/http";
 import { IonicStorageModule } from '@ionic/storage';
+import { Badge } from '@ionic-native/badge';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { IonicStorageModule } from '@ionic/storage';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ApplicationProvider,
-    HttpClient
+    HttpClient,
+    Badge
   ]
 })
 export class AppModule {}
