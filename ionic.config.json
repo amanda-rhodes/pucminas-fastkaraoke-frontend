@@ -1,5 +1,7 @@
 {
   "name": "fastkaraoke-frontend",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

@@ -6,6 +6,9 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page4">
+  <div *ngIf="infosDoNovoPedido" style="text-align: center; padding-bottom: 10px">
+    <p>Olá <strong>{{ infosDoNovoPedido.nome }}</strong>! Você nos informou que está na mesa {{ infosDoNovoPedido.mesa }}.</p>
+  </div>
   <button id="pedidos-button1" ion-button color="positive" block icon-right style="font-style:italic;" on-click="goToNovoPedido()">
     Novo pedido
     <ion-icon name="add"></ion-icon>
